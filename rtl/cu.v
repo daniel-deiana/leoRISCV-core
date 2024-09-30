@@ -77,7 +77,7 @@ always @(*) begin
 end
 
 always @(*) begin
-    // the lowest 2 bits of opcodes are always 1 in RV23I instructions.
+    // the lowest 2 bits of opcodes are always 1 in RV32I instructions.
     case(opcode[6:2])
         // Integer register immediate instruction
         7'b00100: aluCTRL = (funct3 == 3'b000) ? 4'b0000:   // addi

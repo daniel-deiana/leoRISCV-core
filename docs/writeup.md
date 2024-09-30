@@ -30,3 +30,10 @@ we extend the multiplexer of the writeback stage to get data from 3 inputs, (the
 #### Implementing the AUIPC instruction
 the auipc instruction sums the u-immediate value to pc and then puts the result of this operation into rd register, i added another input to the multiplexer of wb stage this time with an adder that passes the address of the new pc (old_pc + u type immediate offset)
 
+
+#### Next step: setup an environment for testing the current instruction that are implemented
+
+resources:
+    - RISCV specs: https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf.
+    - RISCV online encoder/decoder https://luplab.gitlab.io/rvcodecjs/#q=addi+x4,+x2,+8&abi=true&isa=RV32I
+    - Harris and Harris digital design and computer arch. book (RISCV Edition)
