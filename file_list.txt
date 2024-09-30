@@ -1,0 +1,11 @@
+./rtl/datapath.v
+./rtl/sign_extend.v
+./rtl/alu.v
+./rtl/regsfile.v
+./rtl/instr_fetch.v
+./rtl/top_level.v
+./rtl/imem.v
+./rtl/dmem.v
+./rtl/cu.v
+./tb/top_level_tb.v
+

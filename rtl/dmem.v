@@ -12,7 +12,9 @@ reg [31:0] mem[0:1024];
 always @(posedge clk) begin
     if (wr_en_mem) begin
         mem[A] <= WD;
-    else
+        $display("DEBUG: STORE INSTUCTION, wrote value: %i", WD );
+    end else begin
+        $display("DEBUG: load INSTUCTION, read value: %i", mem[A] );
         RD <= mem[A];
     end
 end
