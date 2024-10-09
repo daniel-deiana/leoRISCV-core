@@ -33,7 +33,10 @@ the auipc instruction sums the u-immediate value to pc and then puts the result 
 
 #### Next step: setup an environment for testing the current instruction that are implemented
 
+How to test? (i'm currently investigating the best way to test the instructions).
+
 resources:
     - RISCV specs: https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf.
     - RISCV online encoder/decoder https://luplab.gitlab.io/rvcodecjs/#q=addi+x4,+x2,+8&abi=true&isa=RV32I
     - Harris and Harris digital design and computer arch. book (RISCV Edition)
+    - Repo that uses good testing methods?: https://github.com/4a1c0/RV32i-Verilog

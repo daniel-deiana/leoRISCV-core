@@ -80,6 +80,11 @@ always @(*) begin
     // the lowest 2 bits of opcodes are always 1 in RV32I instructions.
     case(opcode[6:2])
         // Integer register immediate instruction
+        
+        // Nb: this is not good verilog code since in most cases i only need
+        // to watch the funct3 field without considering the opcode (not all cases)
+
+        // register and immediate instructions
         7'b00100: aluCTRL = (funct3 == 3'b000) ? 4'b0000:   // addi
                             (funct3 == 3'b010) ? 4'b0001:   // slti
                             (funct3 == 3'b011) ? 4'b0010:   // sltiu
@@ -89,6 +94,7 @@ always @(*) begin
                             (funct3 == 3'b001) ? 4'b0110:   // slli
                                                  4'b0111;   // srli/srai
 
+        // register and register instructions
         7'b01100: aluCTRL = (funct3 == 3'b001) ? 4'b0110:   // sll
                             (funct3 == 3'b010) ? 4'b0001:   // slt
                             (funct3 == 3'b011) ? 4'b0010:   // sltu
